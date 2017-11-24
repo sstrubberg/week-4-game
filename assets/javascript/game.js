@@ -26,6 +26,9 @@ var gemObject = [
     },
     ];
 $("#numberToGuess").text(winningNumber);
+$("#winCounter").text(win);
+$("#loseCounter").text(loss);
+$("#yourScore").text(counter);
 
 $(document).ready(function() {
 
@@ -48,38 +51,39 @@ $(".crystal-image").on("click",function() {
 
 function winChecker() {
     if (counter === winningNumber) {
-        $(".winner").text("You won!");
-        // alert("You won!");
+        // $(".winner").text("You won!");
+        alert("You won!");
         win += 1;
         $("#winCounter").text(win);
-        reset();
+        gameOverState();
     }
 }
 
 function loseChecker() {
     if (counter > winningNumber) {
-        $(".loser").text("You lost!");
-        // alert("You lost!");
+        // $(".loser").text("You lost!");
+        alert("You lost!");
         loss += 1;
         $("#loseCounter").text(loss);
-        reset();
+        gameOverState();
     }
 }
 
 function gameOverState() {
-    
+    if (counter > winningNumber || counter === winningNumber) {
+        reset();
+    }
 }
 
 function reset() {
     counter = 0;
     winningNumber = Math.floor(Math.random() * 120) + 19;
     $("#numberToGuess").text(winningNumber);
+    $("#yourScore").text(counter);
     // $(".winner").text("Good Luck!");
     // $(".loser").text("Good Luck!");
 
 }
-
-
 
 
 

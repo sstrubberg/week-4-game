@@ -19,20 +19,50 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+    
     
 
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p id=title>Crystal Collector</p>
+            </div>
+            <div class="col-md-4"><div class="winningNumberClass">Collector's Score:</div> 
+                <div id=numberToGuess></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div id="crystals"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="scoreBox">
+                    <div class="yourScoreClass">Your score: <span id="yourScore"></span></div>
+                    <div class="winCount">Wins: <span id="winCounter"><span></div>
+                    <div class="loseCount">Losses: <span id="loseCounter"><span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div id="gameDescription">
+                    <p>Each crystal has a point value assigned when the game starts. To win, click the crystals to get your score to match the Collector's Score.</p>
+                    <p>Be careful not to go over!</p>
+                    <p>Each time the game starts, the game will change the values of each crystal.</p>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
 
-<div id="crystals"></div>
+            <!-- <div class="winner"></div>
+            <div class="loser"></div> -->
 
-<div class="winningNumberClass">Can you reach: <span id=numberToGuess></span></div>
-<div class="yourScoreClass">Your score is: <span id="yourScore"></span></div>
-<div class="winCount">Wins: <span id="winCounter"><span></div>
-<div class="loseCount">Losses: <span id="loseCounter"><span></div>
-
-<div class="winner"></div>
-<div class="loser"></div>
+            <!-- <button onclick="reset()">Reset</button> -->
+    
+    </div>
 
 <script src="assets/javascript/game.js"></script>
 
